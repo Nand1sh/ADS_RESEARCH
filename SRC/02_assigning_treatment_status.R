@@ -3,10 +3,10 @@ library(sf)
 library(dplyr)
 library(stringdist)
 
-#Reading master subdistricts shapefile from SoI.
+#Reading master subdistricts shapefile from SoI
 shapefile <- st_read("DATA/Shapefiles/S0.shp")
 
-#Reading the list of LWE districts for 2018 and 2021.
+#Reading the list of LWE districts for 2018 and 2021
 lwe_2018 <- data.frame(District = c("East Godavari","Guntur", "Srikakulam", "Visakhapatnam",
 	                           "Vizianagram", "West Godavari", "Arwal", "Aurangabad",
                                    "Banka","East Champaran", "Gaya", "Jamui", "Jehanabad",
