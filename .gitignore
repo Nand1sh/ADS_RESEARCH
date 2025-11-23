@@ -4,6 +4,7 @@
 .Ruserdata
 .Rproj.user
 .Renviron
+.Rproj
 
 # Exclude DATA folder
 DATA/
