@@ -1,0 +1,9 @@
+# R specific files
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user
+.Renviron
+
+# Exclude DATA folder
+DATA/
