@@ -14,7 +14,10 @@ controls$pc11_s_id <- sub("^0", "", controls$pc11_s_id)
 names(controls)[names(controls) %in% c("pc11_s_id", "pc11_d_id", "pc11_sd_id")] <- c("pc11_state_id", "pc11_district_id", "pc11_subdistrict_id")
 
 #Filtering for relevant states.
-controls <- controls[controls$pc11_state_id %in% c("9","10","19","20","21","22","23","27","28","32"), ]
+controls <- controls[controls$pc11_state_id %in% c("2", "29", "32", "28",
+                                                   "9", "5", "8", "20", "22",
+                                                   "23", "17", "13", "16", "15", "14", "12", "27", "10", "24", "3",
+                                                   "6", "21", "33", "1", "18"), ]
 
 #Creating new string to get a unique identifier.
 controls <- controls %>% 
@@ -67,8 +70,14 @@ rm(pc11_keys)
 gc()
 
 #Filtering for relevant states.
-pc11_pca_shrid <- pc11_pca_shrid[pc11_pca_shrid$pc11_state_id %in% c("9","10","19","20","21","22","23","27","28","32"), ]
-pc11_vd_shrid <- pc11_vd_shrid[pc11_vd_shrid$pc11_state_id %in% c("9","10","19","20","21","22","23","27","28","32"), ]
+pc11_pca_shrid <- pc11_pca_shrid[pc11_pca_shrid$pc11_state_id %in% c("2", "29", "32", "28",
+                                                   "9", "5", "8", "20", "22",
+                                                   "23", "17", "13", "16", "15", "14", "12", "27", "10", "24", "3",
+                                                   "6", "21", "33", "1", "18"), ]
+pc11_vd_shrid <- pc11_vd_shrid[pc11_vd_shrid$pc11_state_id %in% c("2", "29", "32", "28",
+                                                   "9", "5", "8", "20", "22",
+                                                   "23", "17", "13", "16", "15", "14", "12", "27", "10", "24", "3",
+                                                   "6", "21", "33", "1", "18"), ]
 
 #Adding unique identifier.
 pc11_pca_shrid <- pc11_pca_shrid %>%
@@ -140,8 +149,14 @@ rm(pc01_keys)
 gc()
 
 #Filtering for relevant states.
-pc01_pca_shrid <- pc01_pca_shrid[pc01_pca_shrid$pc01_state_id %in% c("9","10","19","20","21","22","23","27","28","32"), ]
-pc01_vd_shrid <- pc01_vd_shrid[pc01_vd_shrid$pc01_state_id %in% c("9","10","19","20","21","22","23","27","28","32"), ]
+pc01_pca_shrid <- pc01_pca_shrid[pc01_pca_shrid$pc01_state_id %in% c("2", "29", "32", "28",
+                                                   "9", "5", "8", "20", "22",
+                                                   "23", "17", "13", "16", "15", "14", "12", "27", "10", "24", "3",
+                                                   "6", "21", "33", "1", "18"), ]
+pc01_vd_shrid <- pc01_vd_shrid[pc01_vd_shrid$pc01_state_id %in% c("2", "29", "32", "28",
+                                                   "9", "5", "8", "20", "22",
+                                                   "23", "17", "13", "16", "15", "14", "12", "27", "10", "24", "3",
+                                                   "6", "21", "33", "1", "18"), ]
 
 #Adding unique identifier.
 pc01_pca_shrid <- pc01_pca_shrid %>%
