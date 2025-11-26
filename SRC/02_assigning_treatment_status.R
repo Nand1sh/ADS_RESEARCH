@@ -3,13 +3,11 @@ library(sf)
 library(dplyr)
 library(stringdist)
 
-#Reading master subdistricts shapefile from SoI...
-shapefile <- st_read("DATA/Shapefiles/S0.shp")
+#Reading master subdistricts shapefile from SHRUG
+shapefile <- st_read("DATA/SHRUG/SUBDISTRICT_BOUNDARY.shp")
 
-# This is a test!
-
-#Reading the list of LWE districts for 2018 and 2021
-lwe_2018 <- data.frame(District = c("Alluri Sitharamaraju", "Parvathipuram Manyam",
+#Reading the list of ADS treated districts
+ads <- data.frame(District = c("Alluri Sitharamaraju", "Parvathipuram Manyam",
                                     "Y.S.R. Kadapa", "Namsai", "Baksa", "Barpeta",
                                     "Darrang", "Dhubri", "Goalpara", "Hailakandi",
                                     "Udalguri", "Araria", "Aurangabad", "Banka",
@@ -43,73 +41,51 @@ lwe_2018 <- data.frame(District = c("Alluri Sitharamaraju", "Parvathipuram Manya
                                     "Shravasti", "Siddharthnagar", "Sonbhadra",
                                     "Haridwar", "Udham Singh Nagar"))
 
-lwe_2021 <- data.frame(District = c("East Godavari", "Srikakulam", "Visakhapatnam", "Vizianagram",
-	                            "West Godavari", "Aurangabad", "Banka", "Gaya", "Jamui", "Kaimur",
-	                            "Lakhisarai", "Munger", "Nawada", "Rohtas", "West Champaran",
-                                    "Balrampur", "Bastar", "Bijapur", "Dantewada", "Dhamtari", 
-	                            "Gariyaband", "Kanker", "Kondagaon", "Mahasamund",  "Narayanpur", 
-	                            "Rajnandgaon", "Sukma", "Kabirdham", "Mungeli", "Bokaro", "Chatra",
-                                    "Dhanbad", "Dumka", "East Singhbhum", "Garhwa", "Giridih", "Gumla",
-	                            "Hazaribagh", "Khunti", "Latehar", "Lohardaga", "Palamu", "Ranchi",
-	                            "Saraikela-Kharaswan", "West Singhbhum", "Balaghat", "Mandla",
-                                    "Dindori", "Gadchiroli", "Gondia", "Bargarh", "Bolangir", "Kalahandi",
-	                            "Kandhamal", "Koraput", "Malkangiri", "Nabrangpur", "Nuapada", 
-	                            "Rayagada", "Sundergarh", "Adilabad", "Bhadradri-Kothagudem",
-                                    "Jayashankar-Bhupalpally", "Komaram-Bheem", "Mancherial", "Mulugu", 
-	                            "Jhargram", "Malappuram", "Palakkad", "Wayanad"))
-
 #Converting district names to same case across dataframes for better merging.
-lwe_2018$District <- tolower(lwe_2018$District)
-lwe_2021$District <- tolower(lwe_2021$District)
+ads$District <- tolower(ads$District)
 shapefile$District <- tolower(shapefile$District)
 
-#Find district matches for the LWE districts from the master shapefile.
-lwe_2018 <- lwe_2018 %>%
-  rowwise() %>% 
-  mutate(D = shapefile$District[which.max(stringsim(District, shapefile$District, method = 'jw'))])
-
-lwe_2021 <- lwe_2021 %>%
+#Find district matches for the ADS districts from the master shapefile.
+ads <- ads %>%
   rowwise() %>% 
   mutate(D = shapefile$District[which.max(stringsim(District, shapefile$District, method = 'jw'))])
 
 #Fixing mismatches manually
-lwe_2018$D[lwe_2018$District == "banka"] = "b>nka"
-lwe_2018$D[lwe_2018$District == "jamui"] = "jam@i"
-lwe_2018$D[lwe_2018$District == "west champaran"] = "pashchimi champ>ran"
-lwe_2018$D[lwe_2018$District == "balrampur"] = "balr>mpur"
-lwe_2018$D[lwe_2018$District == "bijapur"] = "b|j>pur"
-lwe_2018$D[lwe_2018$District == "dantewada"] = "dakshin bastar dantew>da"
-lwe_2018$D[lwe_2018$District == "kanker"] = "uttar bastar k>nker"
-lwe_2018$D[lwe_2018$District == "narayanpur"] = "n>r>inpur"
-lwe_2018$D[lwe_2018$District == "nuapada"] = "nu>parha"
-lwe_2018$D[lwe_2018$District == "rayagada"] = "r>yagarha"
-lwe_2018$D[lwe_2018$District == "palakkad"] = "p>lakk>d"
-lwe_2018$D[lwe_2018$District == "east champaran"] = "p@rbi champ>ran"
-lwe_2018$D[lwe_2018$District == "nalanda"] = "n>landa"
-lwe_2018$D[lwe_2018$District == "boudh"] = "baudh (bauda)"
+ads$D[ads$District == "banka"] = "b>nka"
+ads$D[ads$District == "jamui"] = "jam@i"
+ads$D[ads$District == "purnea"] = "p@rnia"
+ads$D[ads$District == "sitamarhi"] = "s|t>marhi"
+ads$D[ads$District == "sitamarhi"] = "s|t>marhi"
+ads$D[ads$District == "bijapur"] = "b|j>pur"
+ads$D[ads$District == "dantewada"] = "dakshin bastar dantew>da"
+ads$D[ads$District == "kanker"] = "uttar bastar k>nker"
+ads$D[ads$District == "narayanpur"] = "n>r>inpur"
+ads$D[ads$District == "baramula"] = "b>ram@la"
+ads$D[ads$District == "pashchimi singhbhum"] = "west singhbhum"
+ads$D[ads$District == "purbi singhbhum"] = "east singhbhum"
+ads$D[ads$District == "raichur"] = "r>ich@r"
+ads$D[ads$District == "khandwa"] = "east nimar"
+ads$D[ads$District == "osmanabad"] = "usm>n>b>d"
+ads$D[ads$District == "washim"] = "w>sh|m"
+ads$D[ads$District == "balangir"] = "bolangir (balangir)"
+ads$D[ads$District == "nuapada"] = "nu>parha"
+ads$D[ads$District == "rayagada"] = "r>yagarha"
+ads$D[ads$District == "baran"] = "b>r>n"
+ads$D[ads$District == "dholpur"] = "dhaulpur"
+ads$D[ads$District == "asifabad"] = "kumuram bheem"
+ads$D[ads$District == "bhupalpally"] = "jayashankar bhupalapally"
 
-lwe_2021$D[lwe_2021$District == "banka"] = "b>nka"
-lwe_2021$D[lwe_2021$District == "jamui"] = "jam@i"
-lwe_2021$D[lwe_2021$District == "west champaran"] = "pashchimi champ>ran"
-lwe_2021$D[lwe_2021$District == "balrampur"] = "balr>mpur"
-lwe_2021$D[lwe_2021$District == "bijapur"] = "b|j>pur"
-lwe_2021$D[lwe_2021$District == "dantewada"] = "dakshin bastar dantew>da"
-lwe_2021$D[lwe_2021$District == "kanker"] = "uttar bastar k>nker"
-lwe_2021$D[lwe_2021$District == "narayanpur"] = "n>r>inpur"
-lwe_2021$D[lwe_2021$District == "nuapada"] = "nu>parha"
-lwe_2021$D[lwe_2021$District == "rayagada"] = "r>yagarha"
-lwe_2021$D[lwe_2021$District == "palakkad"] = "p>lakk>d"
+#Removing districts for which no match was found
+ads <- ads %>%
+	filter(!District %in% c('alluri sitharamaraju', 'parvathipuram manyam', 'soreng'))
 
 #Adding treatment status to master shapefile.
-shapefile <- shapefile %>% mutate(LWE2018 = ifelse(District %in% lwe_2018$D,1,0))
-shapefile <- shapefile %>% mutate(LWE2021 = ifelse(District %in% lwe_2021$D,1,0))
+shapefile <- shapefile %>% mutate(ADS = ifelse(District %in% ads$D,1,0))
 
 #Checking and correcting for duplicates.
 shapefile <- shapefile %>% mutate(Test = paste(District,"_",STATE))
-unique(shapefile$Test[shapefile$LWE2018 == 1])
-unique(shapefile$Test[shapefile$LWE2021 == 1])
-shapefile$LWE2018[shapefile$Test =="aurang>b>d _ MAHARASHTRA"] = 0
-shapefile$LWE2021[shapefile$Test =="aurang>b>d _ MAHARASHTRA"] = 0
+unique(shapefile$Test[shapefile$ADS == 1])
+shapefile$ADS[shapefile$Test =="aurang>b>d _ MAHARASHTRA"] = 0
 shapefile <- subset(shapefile, select = -Test)
 
 #Writing shapefile with treatment status.
