@@ -3,7 +3,7 @@ library(sf)
 library(dplyr)
 library(stringdist)
 
-#Reading master subdistricts shapefile from SoI.
+#Reading master subdistricts shapefile from SoI...
 shapefile <- st_read("DATA/Shapefiles/S0.shp")
 
 # This is a test!
