@@ -8,8 +8,8 @@ subdistricts <- st_read("DATA/Shapefiles/S1.shp")
 #Reading cutoff boundary shapefile
 cutoff_boundary <- st_read("DATA/Shapefiles/S2.shp")
 
-#Filtering master shapefile for relevant 26 states.
-subdistricts <- subdistricts[subdistricts$STATE %in% c("HIMACHAL PRADESH", "KARNATAKA", "KERALA", "ANDHRA PRADESH", "TELANGANA", "UTTARPRADESH", "UTTARAKHAND", "RAJASTHAN", "JHARKHAND", "CHHATISGARH", "MADHYA PRADESH", "MEGHALAYA", "NAGALAND", "TRIPURA", "MANIPUR", "MIZORAM", "ARUNACHAL PRADESH", "MAHARASHTRA", "BIHAR", "GUJARAT", "PUNJAB", "HARYANA", "ODISHA", "TAMIL NADU", "JAMMU AND KASHMIR", "ASSAM"), ]
+#Filtering master shapefile for relevant 28 states.
+subdistricts <- subdistricts[subdistricts$STATE %in% c("HIMACHAL PRADESH", "KARNATAKA", "KERALA", "ANDHRA PRADESH", "TELANGANA", "UTTARPRADESH", "UTTARAKHAND", "RAJASTHAN", "JHARKHAND", "CHHATISGARH", "MADHYA PRADESH", "MEGHALAYA", "NAGALAND", "TRIPURA", "MANIPUR", "MIZORAM", "ARUNACHAL PRADESH", "MAHARASHTRA", "BIHAR", "GUJARAT", "PUNJAB", "HARYANA", "ODISHA", "TAMIL NADU", "JAMMU AND KASHMIR", "ASSAM", "WEST BENGAL", "SIKKIM"), ]
 
 #Extracting centroids of subdistrict polygons.
 subdistricts_centroid <- st_centroid(subdistricts)
