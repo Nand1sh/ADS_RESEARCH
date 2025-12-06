@@ -352,8 +352,8 @@ $riotspost18_{is} = \beta_{0} + \beta_{1}L_{i} + \beta_{2}D_{i} + \beta_{3}L_{i}
 \begin{frame}{Main RD estimates}
  \begin{columns}
 \column{0.65\textwidth}
-  \begin{table}
-  \caption{State-wise Bias-corrected Robust RD Estimates} 
+\begin{table}[htbp]
+  \caption{State-wise Robust RD Estimates} 
  \label{main} 
 \begin{adjustbox}{width= 0.95\textwidth}
 \begin{tabular}{@{\extracolsep{5pt}} lcccccccc} 
@@ -361,35 +361,32 @@ $riotspost18_{is} = \beta_{0} + \beta_{1}L_{i} + \beta_{2}D_{i} + \beta_{3}L_{i}
 \hline \\[-1.8ex] 
  & Estimate & $95\%$ CI & Std. Error & Robust P-Value & Obs & Eff. Obs & Bandwidth & Covs \\ 
 \hline \\[-1.8ex] 
-ANDHRA PRADESH & $0.217$ & $[-0.415,0.849]$ & $0.322$ & $0.500$ & $635$ & $324$ & $53.525$ & Yes\\ 
-ANDHRA PRADESH & $0.172$ & $[-0.672,1.016]$ & $0.431$ & $0.689$ & $635$ & $276$ & $34.799$ & No\\ 
+ANDHRA PRADESH & $2.125$ & $[-0.772,5.021]$ & $1.478$ & $0.151$ & $635$ & $116$ & $13.515$ & Yes\\ 
+ANDHRA PRADESH & $1.382$ & $[-1.813,4.577]$ & $1.630$ & $0.397$ & $635$ & $128$ & $15.345$ & No\\ 
 \hline \\[-1.8ex] 
-BIHAR & $4.729$ & $[-44.435,53.893]$ & $25.084$ & $0.850$ & $79$ & $27$ & $13.610$ & Yes\\ 
-BIHAR & $9.501$ & $[-13.902,32.904]$ & $11.940$ & $0.426$ & $79$ & $36$ & $19.468$ & No\\ 
+BIHAR & $14.087$ & $[-128.410,156.585]$ & $72.704$ & $0.846$ & $79$ & $11$ & $7.035$ & Yes\\ 
+BIHAR & $-39.645$ & $[-110.808,31.518]$ & $36.308$ & $0.275$ & $79$ & $5$ & $5.643$ & No\\ 
+\hline \\[-1.8ex]  
+GUJARAT & $3.702$ & $[-14.711,22.115]$ & $9.394$ & $0.694$ & $201$ & $47$ & $36.846$ & Yes\\ 
+GUJARAT & $-0.989$ & $[-24.325,22.346]$ & $11.906$ & $0.934$ & $201$ & $47$ & $34.969$ & No\\ 
 \hline \\[-1.8ex] 
-\textbf{CHHATISGARH} & $\textbf{-3.552}$ & $\textbf{[-5.282,-1.822]}$ & $\textbf{0.883}$ & $\textbf{0.0001}$ & $\textbf{117}$ & $\textbf{30}$ & $\textbf{14.651}$ & \textbf{Yes}\\ 
-CHHATISGARH & $-1.412$ & $[-3.512,0.687]$ & $1.071$ & $0.187$ & $117$ & $32$ & $16.075$ & No\\ 
+\textbf{JHARKHAND} & $\textbf{-18.790}$ & $\textbf{[-35.527,-2.054]}$ & $\textbf{8.539}$ & $\textbf{0.028}$ & $\textbf{256}$ & $\textbf{17}$ & $\textbf{4.398}$ & \textbf{Yes}\\ 
+JHARKHAND & $ -22.381$ & $ [-40.013,-4.749]$ & $ 8.996$ & $ 0.013$ & $ 256$ & $ 43$ & $ 6.602$ & No\\  
 \hline \\[-1.8ex] 
-\textbf{JHARKHAND} & $\textbf{0.941}$ & $\textbf{[-0.503,2.385]}$ & $\textbf{0.737}$ & $\textbf{0.201}$ & $\textbf{256}$ & $\textbf{58}$ & $\textbf{11.552}$ & \textbf{Yes}\\ 
-JHARKHAND & $0.750$ & $[-0.626,2.126]$ & $0.702$ & $0.285$ & $256$ & $68$ & $14.457$ & No\\ 
+MADHYA PRADESH & $3.868$ & $[-4.513,12.250]$ & $4.277$ & $0.366$ & $259$ & $77$ & $24.041$ & Yes\\ 
+MADHYA PRADESH & $6.142$ & $[-2.170,14.454]$ & $4.241$ & $0.148$ & $259$ & $72$ & $21.989$ & No\\ 
 \hline \\[-1.8ex] 
-KERALA & $2.700$ & $[-45.900,51.300]$ & $24.796$ & $0.913$ & $61$ & $13$ & $12.488$ & Yes\\ 
-KERALA & $14.533$ & $[-40.786,69.851]$ & $28.224$ & $0.607$ & $61$ & $11$ & $11.379$ & No\\ 
+MAHARASHTRA & $0.746$ & $[-17.722,19.214]$ & $9.423$ & $0.937$ & $329$ & $53$ & $15.824$ & Yes\\ 
+MAHARASHTRA & $-2.357$ & $[-28.844,24.129]$ & $13.514$ & $0.862$ & $329$ & $54$ & $16.327$ & No\\ 
 \hline \\[-1.8ex] 
-MADHYA PRADESH & $-2.205$ & $[-6.349,1.939]$ & $2.115$ & $0.297$ & $259$ & $24$ & $36.846$ & Yes\\ 
-MADHYA PRADESH & $-3.026$ & $[-11.596,5.545]$ & $4.373$ & $0.489$ & $259$ & $22$ & $32.865$ & No\\
+MIZORAM & $8.251$ & $[1.925,14.578]$ & $3.228$ & $0.011$ & $16$ & $15$ & $124.220$ & Yes\\ 
+MIZORAM & $23.682$ & $[14.480,32.884]$ & $4.695$ & $0.000$ & $16$ & $15$ & $124.220$ & No\\ 
 \hline \\[-1.8ex] 
-MAHARASHTRA & $-1.031$ & $[-2.272,0.209]$ & $0.633$ & $0.103$ & $329$ & $33$ & $29.596$ & Yes\\ 
-MAHARASHTRA & $-1.643$ & $[-3.477,0.191]$ & $0.936$ & $0.079$ & $329$ & $29$ & $25.233$ & No\\ 
+RAJASTHAN & $29.610$ & $[-25.449,84.670]$ & $28.092$ & $0.292$ & $230$ & $45$ & $17.098$ & Yes\\ 
+RAJASTHAN & $31.702$ & $[-26.159,89.562]$ & $29.521$ & $0.283$ & $230$ & $63$ & $25.969$ & No\\ 
 \hline \\[-1.8ex] 
-\textbf{ODISHA} & $\textbf{-6.024}$ & $\textbf{[-10.725,-1.323]}$ & $\textbf{2.398}$ & $\textbf{0.012}$ & $\textbf{89}$ & $\textbf{36}$ & $\textbf{22.268}$ & \textbf{Yes}\\ 
-ODISHA & $-3.066$ & $[-7.914,1.783]$ & $2.474$ & $0.215$ & $89$ & $36$ & $23.332$ & No\\ 
-\hline \\[-1.8ex] 
-TELANGANA & $-0.024$ & $[-0.845,0.797]$ & $0.419$ & $0.954$ & $429$ & $160$ & $25.251$ & Yes\\ 
-TELANGANA & $-0.086$ & $[-1.016,0.845]$ & $0.475$ & $0.857$ & $429$ & $170$ & $27.715$ & No\\ 
-\hline \\[-1.8ex] 
-UTTARPRADESH & $-5.811$ & $[-12.568,0.946]$ & $3.448$ & $0.092$ & $245$ & $54$ & $65.202$ & Yes\\ 
-UTTARPRADESH & $-6.571$ & $[-18.715,5.574]$ & $6.196$ & $0.289$ & $245$ & $52$ & $60.551$ & No\\ 
+TELANGANA & $2.924$ & $[-17.674,23.522]$ & $10.509$ & $0.781$ & $429$ & $23$ & $5.165$ & Yes\\ 
+TELANGANA & $-13.303$ & $[-50.241,23.636]$ & $18.847$ & $0.480$ & $429$ & $21$ & $4.833$ & No\\ 
 \hline \\[-1.8ex] 
 \end{tabular} 
 \end{adjustbox}
@@ -413,8 +410,8 @@ UTTARPRADESH & $-6.571$ & $[-18.715,5.574]$ & $6.196$ & $0.289$ & $245$ & $52$ &
 \hline \\[-1.8ex] 
  & Estimate & $95\%$ CI & Std. Error & Robust P-Value & Obs & Eff. Obs & Bandwidth & Covs \\ 
 \hline \\[-1.8ex] 
-LWE STATES & $-0.471$ & $[-1.187,0.245]$ & $0.365$ & $0.197$ & $2527$ & $1194$ & $63.942$ & Yes\\ 
-LWE STATES & $-0.209$ & $[-1.364,0.947]$ & $0.590$ & $0.724$ & $2527$ & $1154$ & $59.723$ & No\\ 
+ALL STATES & $1.829$ & $[-1.561,5.220]$ & $1.730$ & $0.290$ & $3456$ & $889$ & $20.572$ & Yes\\ 
+ALL STATES & $-1.916$ & $[-17.619,13.787]$ & $8.012$ & $0.811$ & $3456$ & $1194$ & $30.659$ & No\\ 
 \hline \\[-1.8ex] 
 \end{tabular} 
 \end{adjustbox}
@@ -425,7 +422,7 @@ LWE STATES & $-0.209$ & $[-1.364,0.947]$ & $0.590$ & $0.724$ & $2527$ & $1154$ &
 \begin{frame}{Placebo test}
 \begin{table}[!htbp] \centering 
   \caption{Placebo Test} 
-  \caption*{Outcome variable: Total riots before 2018 (2016 to 2017)}
+  \caption*{Outcome variable: PM2.5 before policy implementation}
 \label{placebo}
 \begin{adjustbox}{width=0.75\textwidth}
 \begin{tabular}{@{\extracolsep{5pt}} lcccccccc} 
@@ -433,8 +430,7 @@ LWE STATES & $-0.209$ & $[-1.364,0.947]$ & $0.590$ & $0.724$ & $2527$ & $1154$ &
 \hline \\[-1.8ex] 
  & Estimate & $95\%$ CI & Std. Error & Robust P-Value & Obs & Eff. Obs & Bandwidth & Covs \\ 
 \hline \\[-1.8ex] 
-CHHATISGARH & $-0.068$ & $[-1.159,0.023]$ & $0.046$ & $0.142$ & $117$ & $32$ & $16.280$ & Yes\\ 
-ODISHA & $-0.326$ & $[-1.602,0.949]$ & $0.651$ & $0.616$ & $89$ & $40$ & $26.840$ & Yes\\ 
+JHARKHAND & $-17.297$ & $[-36.163,1.568]$ & $9.626$ & $0.072$ & $256$ & $29$ & $5.261$ & Yes\\ 
 \hline \\[-1.8ex] 
 \end{tabular} 
 \end{adjustbox}
