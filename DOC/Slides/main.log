@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2026/dev/Arch Linux) (preloaded format=xelatex 2025.11.29)  6 DEC 2025 23:10
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2026/dev/Arch Linux) (preloaded format=xelatex 2025.11.29)  7 DEC 2025 19:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1210,132 +1210,54 @@ LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <6> not available
 [7
 
 ]
+File: Images/1_Total.png Graphic file (type bmp)
+<Images/1_Total.png>
+
 
 [8
 
 ]
+File: Images/2_TUT.png Graphic file (type bmp)
+<Images/2_TUT.png>
+
 
 [9
 
 ]
+File: Images/3A.png Graphic file (type bmp)
+<Images/3A.png>
+File: Images/3B.png Graphic file (type bmp)
+<Images/3B.png>
+File: Images/3C.png Graphic file (type bmp)
+<Images/3C.png>
+
 
 [10
-
-]
-
-[11
-
-]
-
-[12
-
-]
-
-[13
-
-]
-
-[14
-
-]
-
-[15
-
-]
-File: Images/Full2.jpg Graphic file (type bmp)
-<Images/Full2.jpg>
-
-
-[16
-
-]
-File: Images/Full.jpg Graphic file (type bmp)
-<Images/Full.jpg>
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.177 \end{frame}
-                 
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.177 \end{frame}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 177.
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <7> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 177.
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <5> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 177.
-
-
-[17
-
-]
-File: Images/Temp1.jpg Graphic file (type bmp)
-<Images/Temp1.jpg>
-File: Images/Temp2.jpg Graphic file (type bmp)
-<Images/Temp2.jpg>
-File: Images/Temp3.jpg Graphic file (type bmp)
-<Images/Temp3.jpg>
-
-
-[18
-
-]
-File: Images/Temp1.jpg Graphic file (type bmp)
-<Images/Temp1.jpg>
-File: Images/Temp2.jpg Graphic file (type bmp)
-<Images/Temp2.jpg>
-File: Images/Temp3.jpg Graphic file (type bmp)
-<Images/Temp3.jpg>
-
-
-[19
-
-]
-File: Images/Temp1.jpg Graphic file (type bmp)
-<Images/Temp1.jpg>
-File: Images/Temp2.jpg Graphic file (type bmp)
-<Images/Temp2.jpg>
-File: Images/Temp3.jpg Graphic file (type bmp)
-<Images/Temp3.jpg>
-
-
-[20
 
 ]
 File: Images/globe.jpg Graphic file (type bmp)
 <Images/globe.jpg>
 
 
-[21
+[11
 
 ]
-File: Images/Violence.jpg Graphic file (type bmp)
-<Images/Violence.jpg>
+File: Images/Controls.png Graphic file (type bmp)
+<Images/Controls.png>
+File: Images/Jharkhand.png Graphic file (type bmp)
+<Images/Jharkhand.png>
 
 
-[22
+[12
 
 ]
-File: Images/controls.jpg Graphic file (type bmp)
-<Images/controls.jpg>
+File: Images/controls_centroid.png Graphic file (type bmp)
+<Images/controls_centroid.png>
 File: Images/theeffect.png Graphic file (type bmp)
 <Images/theeffect.png>
 
 
-[23
+[13
 
 ]
 File: Images/Merge.jpg Graphic file (type bmp)
@@ -1344,7 +1266,7 @@ File: Images/Merge.jpg Graphic file (type bmp)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.267 \end{frame}
+l.241 \end{frame}
                  
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1352,7 +1274,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 \collectboxenvend ->\egroup 
                             \collectbox@currenvir 
-l.267 \end{frame}
+l.241 \end{frame}
                  
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1363,7 +1285,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.267 \end{frame}
+l.241 \end{frame}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1374,7 +1296,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.267 \end{frame}
+l.241 \end{frame}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1385,7 +1307,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.267 \end{frame}
+l.241 \end{frame}
                  
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1393,7 +1315,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 \collectboxenvend ->\egroup 
                             \collectbox@currenvir 
-l.267 \end{frame}
+l.241 \end{frame}
                  
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1404,7 +1326,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.267 \end{frame}
+l.241 \end{frame}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1415,7 +1337,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.267 \end{frame}
+l.241 \end{frame}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1426,7 +1348,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.267 \end{frame}
+l.241 \end{frame}
                  
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1434,7 +1356,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 \collectboxenvend ->\egroup 
                             \collectbox@currenvir 
-l.267 \end{frame}
+l.241 \end{frame}
                  
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1445,7 +1367,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.267 \end{frame}
+l.241 \end{frame}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1456,7 +1378,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.267 \end{frame}
+l.241 \end{frame}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1466,11 +1388,7 @@ my insertion and my current dilemma will both disappear.
 
 
 
-[24
-
-]
-
-[25
+[14
 
 ]
 
@@ -1480,20 +1398,20 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.323 \end{frame}
+l.271 \end{frame}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-! LaTeX Error: \begin{minipage} on input line 323 ended by \end{figure*}.
+! LaTeX Error: \begin{minipage} on input line 271 ended by \end{figure*}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.323 \end{frame}
+l.271 \end{frame}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1503,47 +1421,42 @@ File: Images/theeffect2.png Graphic file (type bmp)
 <Images/theeffect2.png>
 
 
-[26
+[15
 
 ]
 
-[27
+[16
 
 ]
 
-[28
+[17
+
+]
+Overfull \vbox (3.05214pt too high) detected at line 340
+ []
+
+
+
+[18
+
+]
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 359.
+
+
+[19
 
 ]
 
-[29
+[20
 
 ]
 
-[30
+[21
 
 ]
 
-[31
-
-]
-
-[32
-
-]
-
-[33
-
-]
-
-[34
-
-]
-
-[35
-
-]
-
-[36
+[22
 
 ]
 \tf@nav=\write6
@@ -1560,20 +1473,16 @@ File: Images/theeffect2.png Graphic file (type bmp)
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: DE8944C28C9F83238E6E2549D87E5792;568.
  ) 
 Here is how much of TeX's memory you used:
- 29883 strings out of 475848
- 632553 string characters out of 5776012
- 1059580 words of memory out of 5000000
- 52189 multiletter control sequences out of 15000+600000
- 565904 words of font info for 108 fonts, out of 8000000 for 9000
+ 29825 strings out of 475848
+ 630883 string characters out of 5776012
+ 1059574 words of memory out of 5000000
+ 52141 multiletter control sequences out of 15000+600000
+ 564133 words of font info for 91 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 128i,22n,123p,445b,1184s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,19n,123p,445b,1184s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (36 pages).
+Output written on main.pdf (22 pages).

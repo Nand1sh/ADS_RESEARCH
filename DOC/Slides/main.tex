@@ -9,31 +9,31 @@
 \newfontfamily\devanagari{Noto Serif Devanagari}[Script=Devanagari]
 \newfontfamily{\iast}{Noto Serif}[Mapping=itrans-iast]
 \usetheme{Madrid}
-\setbeamercolor*{structure}{bg=blue!20,fg=blue!90}
+\definecolor{teal}{RGB}{8,88,88}
+\setbeamercolor*{structure}{bg=teal!20,fg=teal!90}
 \setbeamercolor*{palette primary}{use=structure,fg=white,bg=structure.fg}
-\setbeamercolor*{palette secondary}{use=structure,fg=blue,bg=white}
+\setbeamercolor*{palette secondary}{use=structure,fg=teal,bg=white}
 \setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=myBlue} 
-\setbeamercolor{frametitle}{bg=blue!85,fg=white}
+\setbeamercolor{frametitle}{bg=teal!85,fg=white}
 \setbeamertemplate{footline}{}
 \setbeamertemplate{navigation symbols}{}
 \setbeamercolor*{titlelike}{parent=palette primary}
-\setbeamercolor{section in head/foot}{fg=blue, bg=white}
-\setbeamercolor{item projected}{bg=blue}
-\setbeamertemplate{enumerate items}{bg=blue}
-\setbeamercolor{itemize item}{fg=blue}
-\setbeamercolor{itemize subitem}{fg=blue}
-\setbeamercolor{button}{bg=blue}
+\setbeamercolor{section in head/foot}{fg=teal, bg=white}
+\setbeamercolor{item projected}{bg=teal}
+\setbeamertemplate{enumerate items}{bg=teal}
+\setbeamercolor{itemize item}{fg=teal}
+\setbeamercolor{itemize subitem}{fg=teal}
+\setbeamercolor{button}{bg=teal}
 \setbeamercolor{section in toc}{fg=black}
 \setbeamercolor{subsection in toc}{fg=black}
-\setbeamercolor{block title}{bg=blue, fg=white}
-\setbeamercolor{block body}{bg=blue!20}
+\setbeamercolor{block title}{bg=teal, fg=white}
+\setbeamercolor{block body}{bg=teal!20}
 \useinnertheme{circles}
 \useoutertheme{miniframes}
 \setbeamertemplate{headline}{}
-\title{Whip or Carrot? Effect of Socio-economic \\ Reforms on Violence}
-\subtitle{Evidence from a spatial RD in India}
-\author{Nandish Patel}
-\institute{Ahmedabad University}
+\title{Aspirations in the Air: Effect of Development \\ Schemes on AQI}
+\subtitle{Evidence from a Spatial RD in India}
+\author{Aayushi Agarwal, Bhaskar Agarwal, Gaurav Banerjee, Nandish Patel}
 \date{\today}
 \begin{document}
 
@@ -46,38 +46,37 @@
 \begin{frame}
 \frametitle{Contents}
 \begin{itemize}
-\item Background: Why study socio-economic reforms for mitigating violence?, Common problems, Exogenous variation....
-\item Methodology: Sources of data, Wrangling, Merging, Cleaning.
-\item Empirical strategy: Identification, Model, Controls.
-\item Results: State-wise, Aggregated, Placebo test.
-\item Conclusion: Shortcomings, Way ahead, Q/A.
+\item Background: Why study development reforms in the context of air quality?, Common problems, Exogenous variation...
+\item Methodology: Sources of data, Wrangling, Merging, Cleaning
+\item Empirical strategy: Identification, Model, Controls
+\item Results: State-wise, Aggregated, Placebo Test
+\item Conclusion: Shortcomings, Way ahead, Q/A
 \end{itemize}
 \end{frame}
 
 \section{Background} 
-\begin{frame}{Why socio-economic reforms?}
-\begin{block}{Whip}
-Violence = $\downarrow$ f(Reforms)
+\begin{frame}{Why look at development schemes?}
+\begin{block}{Mechanism I}
+AQI = $\downarrow$ f(Development)
 \end{block}
 \begin{itemize}
-\item<2-> Most instances of violence are driven by socio-economic divide. [Khanna and Zimmermann, 2017] provide two explanations:
-\item<3-> Opportunity cost
-\item<4-> Hearts and Minds
-\item<5-> \devanagari{यतः परस्परं विवदमानानाम् अपि धर्मशास्त्राणाम् \textbf{अहिंसा परमो धर्म} इत्यत्रैकमत्यम् ।}
-\item<6-> Right?
+\item Clean Cooking Adoption
+\item Waste Management
+%\item<5-> \devanagari{यतः परस्परं विवदमानानाम् अपि धर्मशास्त्राणाम् \textbf{अहिंसा परमो धर्म} इत्यत्रैकमत्यम् ।}
+\item Agricultural Residue Management
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Context is everything....}
-\begin{block}{Carrot}
-Violence = $\uparrow$ f(Reforms)
+\begin{frame}{On the other hand...}
+\begin{block}{Mechanism II}
+AQI = $\uparrow$ f(Development)
 \end{block}
 \begin{itemize}
-\item<1-> The story of the cat (insurgents) and the vulture (government), \textit{Hitopadeśa}.
-\item<2-> Larger resource pie explanation [ibid].
-\item<3-> Finding the direction of the effect is then an empirical problem.
-\item<4-> \textit{neti neti}: Both approaches can be applied in varying degrees depending on the relationship in an area.
+\item Infrastructure Development
+\item Increased Industrial Output 
+\item Rise in Vehicular Emission 
 \end{itemize}
+Finding the direction of the effect is then an empirical problem
 \end{frame}
 
 \begin{frame}{Exogenous variation}
@@ -86,10 +85,8 @@ Violence = $\uparrow$ f(Reforms)
 \begin{minipage}[t][.5\textheight][t]{\textwidth}
  \centering
 \begin{itemize}
-\item Socio-economic reforms are implemented non-randomly. 
-\item Reforms $\rightarrow$ Violence
-\item Violence $\rightarrow$ Reforms
-\item 2018 Revision of the SRE scheme targeted at Left-wing extremism by MHA.
+\item Development policies are implemented non-randomly
+\item Cannot isolate causal impact at the District level 
 \end{itemize}
 \end{minipage}
 \column{0.5\textwidth}
@@ -106,16 +103,12 @@ LATE using spatial regression discontinuity
 \end{columns}
 \end{frame}
 
-\begin{frame}{SRE scheme}
+\begin{frame}{Aspirational Districts Scheme}
 \begin{itemize}
-\item The Left-wing extremism division of MHA was created in 2006.
-\item SRE is an umbrella scheme enveloping several smaller reforms on Education, Health, Public Infrastructure, Roads, Communication etc.
-\item As of 2018, $90$ districts across $11$ states of India are considered LWE affected.
-\item Novelty of reforms introduced in 2018:
-\begin{itemize}
-\item[a.] Documented evidence- Increased annual outlays, SCA scheme, USO fund etc.
-\item[b.] Placebo test
-\end{itemize}
+\item Launched in January 2018 by NITI Aayog
+\item Aimed at rapid transformation of underdeveloped yet aspirational districts
+\item Focus areas: Basic Infrastructure, Health \& Nutrition, Education, Agriculture \& Financial Inclusion
+\item Selected districts using a composite deprivation index
 \end{itemize}
 \end{frame}
 
@@ -124,15 +117,14 @@ LATE using spatial regression discontinuity
 
 \begin{frame}{Methodology}
 \begin{block}{Research question}
-``\textit{Do the socio-economic
-schemes targeting LWE reduce subdistrict level violence in India?}"
+``\textit{How do development policies impact subdistrict level air quality in India?}"
 \end{block}
 Sources of data:
 \begin{itemize}
 \item Master shapefile- Survey of India (SoI)
-\item Treatment- Ministry of Home Affairs (MHA)
-\item Violence- Armed Conflict Location and Event Data Project (ACLED)
-\item Controls- Socioeconomic High-resolution Rural-Urban Geographic Platform (SHRUG)
+\item Treatment- NITI Aayog
+\item AQI- Socioeconomic High-resolution Rural-Urban Geographic Platform (SHRUG)
+\item Controls- ibid 
 \end{itemize}
 \end{frame}
 
@@ -140,38 +132,26 @@ Sources of data:
 \frametitle{Subdistricts shapefile}
  \begin{columns}
  \column{0.5\textwidth} 
-\includegraphics[height= 0.8\textheight, center]{Full2.jpg}
+\includegraphics[height= 0.8\textheight, center]{1_Total.png}
 \column{0.5\textwidth}
 \begin{itemize}
 \item Source: Survey of India (SoI)
 \item Tehsil/Taluk level administrative shapefile
 \item 4723 features, 5 fields, LCC\_WGS84
-\item Upon filtering for 11, we are left with 2922 subdistricts
 \end{itemize}
 \end{columns}
 \end{frame}
 
-\begin{frame}{LWE treatment status}
+\begin{frame}{ADS treatment status}
  \begin{columns}
  \column{0.5\textwidth} 
-\includegraphics[height= 0.8\textheight, center]{Full.jpg}
+\includegraphics[height= 0.8\textheight, center]{2_TUT.png}
 \column{0.5\textwidth}
 \begin{itemize}
-\item MHA only provides names of Districts
+\item NITI Aayog only provides names of Districts
 \item Merging areas with names is a nightmare in India- Differing spellings, Changed names...
-\item Jaro distance:
-\begin{equation*}
-\begin{adjustbox}{width=0.8\textwidth}
-\text{Similarity} = 
-\begin{cases}
-\begin{aligned}
-&0 & \text{if } m = 0 \\ \\
-&\frac{1}{3} \left( \frac{w_{1}m}{|a|} + \frac{w_{2}m}{|b|} + \frac{w_{3}(m-t)}{m} \right) & \text{otherwise}
-\end{aligned}
-\end{cases}
-\end{adjustbox}
-\end{equation*}
-\small{Here, $m$ is the number of character matches, $t$ is the number of transpositions, $|a|$ is the number of characters in string $a$ and $w_{i}$ are weights summing to $3$.}
+\item As a result, we fuzzy match district names using Jaro-Winkler Distance
+\item Filtered for 29 relevant states
 \end{itemize}
 \end{columns}
 \end{frame}
@@ -179,12 +159,12 @@ Sources of data:
 \begin{frame}
 \frametitle{Cutoff}
  \begin{columns}
-\column<1->{0.33\textwidth}  
-\includegraphics[height= 0.8\textheight, center]{Temp1.jpg}
- \column<2->{0.33\textwidth} 
-\includegraphics[height= 0.8\textheight, center]{Temp2.jpg}
-\column<3->{0.33\textwidth}
-\includegraphics[height= 0.8\textheight, center]{Temp3.jpg}
+\column{0.33\textwidth}  
+\includegraphics[height= 0.7\textheight, center]{3A.png}
+ \column{0.33\textwidth} 
+\includegraphics[height= 0.7\textheight, center]{3B.png}
+\column{0.33\textwidth}
+\includegraphics[height= 0.7\textheight, center]{3C.png}
 \end{columns}
 \end{frame}
 
@@ -196,27 +176,22 @@ Sources of data:
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Violence}
+\begin{frame}{AQI}
  \begin{columns}
  \column{0.5\textwidth} 
-\includegraphics[height= 0.7\textheight, center]{Violence.jpg}
+\includegraphics[height= 0.7\textheight, center]{Controls.png}
 \column{0.5\textwidth}
-\begin{itemize}
-\item Source: ACLED, 2016-23
-\item Only riots is testable
-\item Not filtered for cause/agent (Ex- IND1340)
-\item Outcome is violence and not LWE specific violence
-\end{itemize}
+\includegraphics[height= 0.7\textheight, center]{Jharkhand.png}
 \end{columns}
 \end{frame}
 
 \begin{frame}{Why controls?}
  \begin{columns}
 \column{0.5\textwidth}  
-\includegraphics[height= 0.8\textheight, center]{controls.jpg}
+\includegraphics[height= 0.8\textheight, center]{controls_centroid.png}
  \column{0.5\textwidth} 
 \begin{figure}
-\includegraphics[height= 0.5\textheight, center]{theeffect.png}
+\includegraphics[height= 0.4\textheight, center]{theeffect.png}
 \caption*{\tiny{Source: The Effect, Nick Huntington-Klein}}
 \end{figure}
 \end{columns}
@@ -261,35 +236,8 @@ AGR_{ij} = \frac{Growthrate_{ij}}{10}
 PC18_{ij} = PC11_{ij}\left(1 + \frac{AGR_{ij}}{100} \right)^7
 \end{adjustbox}
 \end{equation*}
-\item Forest Cover, [Ghatak and Eynde, 2017]
 \end{itemize}
 \end{columns}
-\end{frame}
-
-\begin{frame}{Data cleaning}
-\begin{itemize}
-\item Remove NAs and Infs
-\item Winsorize top and bottom 5\%
-\item Divide distances to cutoff by 1000 to get kms
-\end{itemize}
-\begin{table}[htbp] \centering 
-\begin{adjustbox}{width=0.65\textwidth}
-\begin{tabular}{@{\extracolsep{5pt}}lccccc} 
-\\[-1.8ex]\hline 
-\hline \\[-1.8ex] 
-\textbf{Variable} & \multicolumn{1}{c}{\textbf{N}} & \multicolumn{1}{c}{\textbf{Mean}} & \multicolumn{1}{c}{\textbf{St. Dev.}} & \multicolumn{1}{c}{\textbf{Min}} & \multicolumn{1}{c}{\textbf{Max}} \\ 
-\hline \\[-1.8ex] 
-d2c\_18 & 2,527 & $-$107.444 & 161.875 & $-$664.832 & 169.909 \\ 
-pc18\_sc\_share & 2,527 & 16.841 & 7.929 & 3.494 & 32.510 \\ 
-pc18\_st\_share & 2,527 & 18.185 & 24.451 & 0.098 & 82.164 \\ 
-pc18\_lit\_share & 2,527 & 66.757 & 8.614 & 51.963 & 83.306 \\ 
-pc18\_rural\_share & 2,527 & 86.155 & 19.955 & 33.346 & 100.000 \\ 
-pc18\_work\_share & 2,527 & 46.501 & 8.199 & 30.829 & 59.048 \\ 
-pc18\_forest\_share & 2,527 & 11.739 & 14.597 & 0.000 & 50.419 \\ 
-\hline \\[-1.8ex] 
-\end{tabular} 
-\end{adjustbox}
-\end{table}
 \end{frame}
 
 \section{Empirical strategy}
@@ -300,9 +248,9 @@ pc18\_forest\_share & 2,527 & 11.739 & 14.597 & 0.000 & 50.419 \\
 \begin{figure*}
 \begin{adjustbox}{width=\textwidth}
 \begin{tikzpicture}
-\node (v0) at (-1.5,0) {LWE};
-\node (v1) at (5,0) {SRE scheme};
-\node (v2) at (5,2) {Violence};
+\node (v0) at (-1.5,0) {Aspirational District};
+\node (v1) at (5,0) {ADS scheme};
+\node (v2) at (5,2) {AQI};
 \node (v3) at (-1.5,3) {Distance to cutoff};
 \node (v4) at (5,3) {Z};
 \draw [->] (v1) edge (v2);
@@ -323,14 +271,14 @@ pc18\_forest\_share & 2,527 & 11.739 & 14.597 & 0.000 & 50.419 \\
 \end{frame}
 
 \begin{frame}{Model}
-\only<1->{\begin{block}{Linear}
-$riotspost18_{i} = \beta_{0} + \beta_{1}L_{i} + \beta_{2}D_{i} + \beta_{3}L_{i}D_{i} + \mu_{i}$
-\end{block}}
-\only<2->{$\beta_{1}$ is the coefficient of interest.}
-\only<3->{\begin{block}{2nd order polynomial}
-$riotspost18_{i} = \beta_{0} + \beta_{1}L_{i} + \beta_{2}D_{i} + \beta_{3}{D_{i}}^2 + \beta_{4}L_{i}D_{i} + \beta_{5}L_{i}(D_{i})^2 + \mu_{i}$
-\end{block}}
-\only<4->{Following the recommendations of [Gelman and Imbens, 2019], I do not check for higher order polynomials greater than two.}
+\begin{block}{Linear}
+	$pm25\_avg18_{i} = \beta_{0} + \beta_{1}A_{i} + \beta_{2}D_{i} + \beta_{3}A_{i}D_{i} + \mu_{i}$
+\end{block}
+$\beta_{1}$ is the coefficient of interest
+\begin{block}{2nd order polynomial}
+	$pm25\_avg18_{i} = \beta_{0} + \beta_{1}A_{i} + \beta_{2}D_{i} + \beta_{3}{D_{i}}^2 + \beta_{4}A_{i}D_{i} + \beta_{5}A_{i}(D_{i})^2 + \mu_{i}$
+\end{block}
+Following the recommendations of [Gelman and Imbens, 2019], we do not check for higher order polynomials greater than two
 \end{frame}
 
 \begin{frame}{rdrobust}
@@ -343,19 +291,17 @@ $riotspost18_{i} = \beta_{0} + \beta_{1}L_{i} + \beta_{2}D_{i} + \beta_{3}{D_{i}
 \item Restricting geographical area under study
 \end{itemize}
 \begin{block}{Estimating model with controls}
-$riotspost18_{is} = \beta_{0} + \beta_{1}L_{i} + \beta_{2}D_{i} + \beta_{3}L_{i}D_{i} + X_{i}\gamma + \lambda_{s} + \mu_{i}$
+	$pm25\_avg18_{is} = \beta_{0} + \beta_{1}A_{i} + \beta_{2}D_{i} + \beta_{3}A_{i}D_{i} + X_{i}\gamma + \lambda_{s} + \mu_{i}$
 \end{block}
 \end{frame}
 
 \section{Results}
 
 \begin{frame}{Main RD estimates}
- \begin{columns}
-\column{0.65\textwidth}
 \begin{table}[htbp]
   \caption{State-wise Robust RD Estimates} 
  \label{main} 
-\begin{adjustbox}{width= 0.95\textwidth}
+\begin{adjustbox}{width= 0.75\textwidth}
 \begin{tabular}{@{\extracolsep{5pt}} lcccccccc} 
 \\[-3.5ex]\hline 
 \hline \\[-1.8ex] 
@@ -391,13 +337,6 @@ TELANGANA & $-13.303$ & $[-50.241,23.636]$ & $18.847$ & $0.480$ & $429$ & $21$ &
 \end{tabular} 
 \end{adjustbox}
 \end{table}
-\column{0.35\textwidth} 
-\begin{itemize}
-\item Catch-up effect
-\item Rollout and/or focused treatment
-\item Violence as a proxy
-\end{itemize}
-\end{columns}
 \end{frame}
 
 \begin{frame}{Aggregated RD estimate}
@@ -422,7 +361,7 @@ ALL STATES & $-1.916$ & $[-17.619,13.787]$ & $8.012$ & $0.811$ & $3456$ & $1194$
 \begin{frame}{Placebo test}
 \begin{table}[!htbp] \centering 
   \caption{Placebo Test} 
-  \caption*{Outcome variable: PM2.5 before policy implementation}
+	\caption*{Outcome variable: PM2.5 in 2017 (before policy implementation)}
 \label{placebo}
 \begin{adjustbox}{width=0.75\textwidth}
 \begin{tabular}{@{\extracolsep{5pt}} lcccccccc} 
@@ -442,10 +381,10 @@ JHARKHAND & $-17.297$ & $[-36.163,1.568]$ & $9.626$ & $0.072$ & $256$ & $29$ & $
 
 \begin{frame}{Conclusion}
 \begin{itemize}
-\item I find that violence post 2018 is lower by approximately 4 events in Chhattisgarh and 6 events in Odisha for the treated subdistricts
-\item Intriguing case of Jharkhand
-\item Shortcomings: Filtering for LWE, Non-euclidean distance, Two-running variable approach
-\item Way forward: Village/Town level, Alternate sources of Violence
+\item We find that AQI in 2018 is lower by approximately 18.79 units in Jharkhand for the treated subdistricts
+\item Evidence for dual mechanism
+\item Shortcomings: Spatial spillovers, Non-euclidean distance
+\item Way forward: Village/Town level, Two-running variable approach
 \end{itemize}
 \end{frame}
 
@@ -453,6 +392,6 @@ JHARKHAND & $-17.297$ & $[-36.163,1.568]$ & $9.626$ & $0.072$ & $256$ & $29$ & $
 \begin{frame}[plain]
 \frametitle{Fin.}
   \centering \Huge
-  \textbf{Thank You}
+	\textbf{Thank You :)}
 \end{frame}
 \end{document} 
