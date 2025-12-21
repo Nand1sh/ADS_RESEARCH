@@ -1,4 +1,4 @@
-#Loading required packages.
+#Loading required packages
 library(sf)
 library(dplyr)
 
