@@ -1,0 +1,32 @@
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Build artifacts
+*.synctex
+*.nav
+*.snm
+
+# Bibliography
+*.bcf
+*.run.xml
+
+# Editor / OS junk
+*~
+.DS_Store
+
+# LaTeX source (ignore explicitly)
+main.tex
+references.bib
+
+# Directories
+Images/
